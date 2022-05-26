@@ -7,7 +7,7 @@ from DataService import DataService
 app = Flask(__name__)
 
 
-@app.route("/agw/api", methods=['GET'])
+@app.route("/agw/api", methods=['POST'])
 def getRelatedWords():
     if(not request.is_json):
         return jsonify({"ERROR": "This API only accepts json as body input"})
